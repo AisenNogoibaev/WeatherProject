@@ -1,15 +1,15 @@
 import React, { useState } from 'react'
 import { useDispatch } from 'react-redux'
-import { fetch_city, fetch_request } from '../store/actions'
+import { fetch_city } from '../store/actions'
 
-const Form = (props) => {
+const Form = () => {
 	const dispatch = useDispatch()
-	const [city, setCity] = useState()
+	const [city, setCity] = useState('')
 	const sendCityName = () => {
 		dispatch(fetch_city({ city }))
 	}
 	return (
-		<>
+		<div className='form'>
 			<input
 				value={city}
 				onChange={(e) => setCity(e.target.value)}
@@ -17,9 +17,10 @@ const Form = (props) => {
 				name='city'
 				placeholder='City...'
 			/>
-			{/* <input type='text' name='country' placeholder='Country...' /> */}
-			<button onClick={sendCityName}>Get Weather</button>
-		</>
+			<div>
+				<button onClick={sendCityName}>Get Weather</button>
+			</div>
+		</div>
 	)
 }
 

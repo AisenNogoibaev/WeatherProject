@@ -1,9 +1,11 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
 
-import './App.css'
 import 'bootstrap/dist/css/bootstrap.min.css'
+import './App.css'
+import 'animate.css'
 import App from './App'
+import thunk from 'redux-thunk'
 import { composeWithDevTools } from 'redux-devtools-extension'
 import { applyMiddleware, createStore } from 'redux'
 import { rootReducer } from './store/reducers/rootReducer'

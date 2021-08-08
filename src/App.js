@@ -3,6 +3,7 @@ import Titles from './components/Titles'
 import Form from './components/Form'
 import Weather from './components/Weather'
 import './App.css'
+import 'animate.css'
 import { useSelector } from 'react-redux'
 
 function App() {
@@ -20,12 +21,12 @@ function App() {
 							<div className='col-6 form-container'>
 								<Form />
 								<Weather
-									temperature={bd.temperature}
-									city={bd.city}
-									country={bd.country}
-									humidity={bd.humidity}
-									description={bd.description}
-									error={bd.error}
+									temperature={state.temperature}
+									city={state.city}
+									country={state.country}
+									humidity={state.humidity}
+									description={state.description}
+									error={state.error}
 								/>
 							</div>
 						</div>
