@@ -1,5 +1,4 @@
-import React, { useState } from 'react'
-import { useSelector } from 'react-redux'
+import React from 'react'
 import { Link } from 'react-router-dom'
 import weatherImage from '../../img/weather-icon2.png'
 import corona from '../../img/corona-icon.png'

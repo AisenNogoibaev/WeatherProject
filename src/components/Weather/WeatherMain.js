@@ -1,8 +1,8 @@
-import React, { useState } from 'react'
+import React from 'react'
 import { useSelector } from 'react-redux'
-import Form from '../Form'
-import Weather from '../Weather'
-import Titles from '../Titles'
+import Form from './WeatherComponent/Form'
+import Weather from './WeatherComponent/Weather'
+import Titles from './WeatherComponent/Titles'
 
 const WeatherMain = () => {
 	const state = useSelector((state) => state)

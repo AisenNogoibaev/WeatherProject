@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import { useDispatch } from 'react-redux'
-import { fetch_city } from '../store/actions'
+import { fetch_city } from '../../../store/actions'
 
 const Form = () => {
 	const dispatch = useDispatch()

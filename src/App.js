@@ -1,6 +1,5 @@
-import React, { useState } from 'react'
+import React from 'react'
 import './App.css'
-import { useSelector } from 'react-redux'
 import { BrowserRouter, Route, Switch } from 'react-router-dom'
 
 import './App.css'
@@ -9,8 +8,6 @@ import Home from './layouts/HomePage'
 import CoronaVirus from './components/CoronaVirus'
 
 function App() {
-	const state = useSelector((state) => state)
-
 	return (
 		<BrowserRouter>
 			<Switch>
