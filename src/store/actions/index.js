@@ -1,4 +1,4 @@
-import { APP_KEY } from '../../api'
+ import { APP_KEY } from '../../api'
 
 export const FETCH_REQUEST = 'FETCH_REQUEST'
 export const FETCH_SUCCESS = 'FETCH_SUCCESS'

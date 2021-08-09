@@ -3,7 +3,6 @@ import Titles from './components/Titles'
 import Form from './components/Form'
 import Weather from './components/Weather'
 import './App.css'
-import 'animate.css'
 import { useSelector } from 'react-redux'
 
 function App() {
