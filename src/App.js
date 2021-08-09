@@ -1,38 +1,24 @@
 import React, { useState } from 'react'
-import Titles from './components/Titles'
-import Form from './components/Form'
-import Weather from './components/Weather'
 import './App.css'
 import { useSelector } from 'react-redux'
+import { BrowserRouter, Route, Switch } from 'react-router-dom'
+
+import './App.css'
+import WeatherMain from './components/Weather/WeatherMain'
+import Home from './layouts/HomePage'
+import CoronaVirus from './components/CoronaVirus'
 
 function App() {
 	const state = useSelector((state) => state)
 
 	return (
-		<div>
-			<div className='wrapper'>
-				<div className='main'>
-					<div className='container'>
-						<div className='row'>
-							<div className='col-6 title-container'>
-								<Titles />
-							</div>
-							<div className='col-6 form-container'>
-								<Form />
-								<Weather
-									temperature={state.temperature}
-									city={state.city}
-									country={state.country}
-									humidity={state.humidity}
-									description={state.description}
-									error={state.error}
-								/>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
+		<BrowserRouter>
+			<Switch>
+				<Route path={'/corona'} component={CoronaVirus} />
+				<Route path={'/weather'} component={WeatherMain} />
+				<Route path={'/'} component={Home} />
+			</Switch>
+		</BrowserRouter>
 	)
 }
 
