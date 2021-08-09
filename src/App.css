@@ -12,6 +12,65 @@ body {
 .container {
 	width: 1000px;
 }
+.homepage__bg {
+	background-color: rgb(23, 238, 225, 20);
+	min-height: 100vh;
+	background-size: cover;
+	display: flex;
+	justify-content: space-evenly;
+	align-items: center;
+}
+.route__form {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 2rem;
+	position: relative;
+}
+.corona {
+	top: -200px;
+	left: -300px;
+}
+.route__form:nth-child(2) {
+	top: 100px;
+	left: 10px;
+}
+.route__form > button {
+	text-decoration: none;
+	color: rgb(240, 40, 40);
+	display: inline-block;
+	position: relative;
+	padding: 15px 30px;
+	border: 1px solid;
+	border-image: linear-gradient(180deg, #ff3000, #ed0200, #ff096c, #d50082);
+	border-image-slice: 1;
+	margin: 10px 20px;
+	font-family: 'Montserrat', sans-serif;
+	text-transform: uppercase;
+	overflow: hidden;
+	letter-spacing: 2px;
+	transition: 0.8s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+.route__form > button:before {
+	content: '';
+	position: absolute;
+	left: 0;
+	top: 0;
+	height: 0;
+	width: 100%;
+	z-index: -1;
+	color: white;
+	background: linear-gradient(180deg, #ff3000, #ed0200, #ff096c, #d50082);
+	transition: 0.8s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+.route__form > button:hover {
+	background: rgba(255, 255, 255, 0);
+}
+.route__form > button:hover:before {
+	bottom: 0%;
+	top: auto;
+	height: 100%;
+}
 .wrapper {
 	background: linear-gradient(to right, #e67e22, #e74c3c);
 	height: 100vh;
@@ -72,7 +131,7 @@ body {
 input[type='text'] {
 	background-color: transparent;
 	border: 0;
-	border-bottom: solid 1px #f16051;
+	border-bottom: solid 1px #27886b;
 	width: 30%;
 	padding-bottom: 4px;
 	color: #f16051 !important;
@@ -83,10 +142,16 @@ input[type='text'] {
 	font-size: 20px;
 	outline: none;
 }
+img {
+	width: 200px;
+	height: 200px;
+	position: absolute;
+	max-width: 200px;
+}
 input:active {
 	background-color: none;
 }
-button {
+.form__button__weather {
 	border: 0;
 	padding: 8px 20px;
 	margin: 0 2px;
@@ -95,12 +160,12 @@ button {
 	letter-spacing: 1px;
 	font-size: 15px;
 	cursor: pointer;
-	background-color: #f16051;
+	background-color: #27886b;
 	color: #fff;
 	font-weight: 100;
 }
 
-button:active {
+.form__button__weather:active {
 	outline: none;
 }
 
@@ -123,7 +188,7 @@ button:active {
 }
 
 .weather__value {
-	color: rgb(34, 136, 192);
+	color: #27886b;
 	font-weight: 200;
 }
 
