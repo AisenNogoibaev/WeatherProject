@@ -4,7 +4,7 @@ import { BrowserRouter, Route, Switch } from 'react-router-dom'
 
 import './App.css'
 import WeatherMain from './components/Weather/WeatherMain'
-import Home from './layouts/HomePage'
+import Home from './components/HomePage'
 import CoronaVirus from './components/CoronaVirus'
 
 function App() {

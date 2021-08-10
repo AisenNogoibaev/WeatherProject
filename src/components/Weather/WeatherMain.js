@@ -5,7 +5,7 @@ import Weather from './WeatherComponent/Weather'
 import Titles from './WeatherComponent/Titles'
 
 const WeatherMain = () => {
-	const state = useSelector((state) => state)
+	const state = useSelector((state) => state.weatherReducer)
 
 	return (
 		<div>

@@ -1,4 +1,8 @@
-import { FETCH_ERROR, FETCH_REQUEST, FETCH_SUCCESS } from '../actions'
+import {
+	FETCH_ERROR,
+	FETCH_REQUEST,
+	FETCH_SUCCESS,
+} from '../../actions/weather/index'
 
 const initialState = {
 	temperature: null,
@@ -9,7 +13,7 @@ const initialState = {
 	weatherMain: null,
 	error: null,
 }
-export const rootReducer = (state = initialState, action) => {
+export const weatherReducer = (state = initialState, action) => {
 	switch (action.type) {
 		case FETCH_SUCCESS:
 			console.log(action.payload)
