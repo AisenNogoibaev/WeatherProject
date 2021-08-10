@@ -1,4 +1,8 @@
-import { FETCH_ERROR, FETCH_REQUEST, FETCH_SUCCESS } from '../../actions/weather'
+import {
+	FETCH_ERROR,
+	FETCH_REQUEST,
+	FETCH_SUCCESS,
+} from '../../actions/weather/index'
 
 const initialState = {
 	temperature: null,

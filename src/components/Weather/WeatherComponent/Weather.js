@@ -1,7 +1,6 @@
 import React from 'react'
 import { useSelector } from 'react-redux'
 
-
 const Weather = (props) => {
 	const weatherCheck = useSelector((state) => state.weatherMain)
 	return (
@@ -23,7 +22,10 @@ const Weather = (props) => {
 						<span className='weather__value'> {props.error}</span>
 					) : (
 						<>
-							<span className='weather__value'> {props.temperature}</span>
+							<span className='weather__value'>
+								{' '}
+								{props.temperature}
+							</span>
 							{weatherCheck === 'Rain' ? (
 								<svg
 									xmlns='http://www.w3.org/2000/svg'

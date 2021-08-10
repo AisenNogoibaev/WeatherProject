@@ -5,7 +5,7 @@ import { fetchCountries } from '../../../../api/fetch.api'
 
 import styles from './CountryPicker.module.css'
 
-const Countries = ({ handleCountryChange }) => {
+export const Countries = ({ handleCountryChange }) => {
 	const [countries, setCountries] = useState([])
 
 	useEffect(() => {
