@@ -11,9 +11,9 @@ const Info = ({ data: { confirmed, recovered, deaths, lastUpdate } }) => {
 	return (
 		<div className={styles.container}>
 			<Typography gutterBottom variant='h4' component='h2'>
-				Global
+				INFO:
 			</Typography>
-			<Grid container spacing={3} justify='center'>
+			<Grid container spacing={3} justify='center' id={styles.block__margin}>
 				<CardComponent
 					className={styles.infected}
 					cardTitle='Infected'

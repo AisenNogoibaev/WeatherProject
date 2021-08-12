@@ -18,7 +18,9 @@ const Form = () => {
 				placeholder='City...'
 			/>
 			<div>
-				<button className='form__button__weather' onClick={sendCityName}>Get Weather</button>
+				<button className='form__button__weather' onClick={sendCityName}>
+					Get Weather
+				</button>
 			</div>
 		</div>
 	)
