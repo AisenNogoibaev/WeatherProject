@@ -1,11 +1,12 @@
 import React from 'react'
-import './App.css'
 import { BrowserRouter, Route, Switch } from 'react-router-dom'
 
-import './App.css'
 import WeatherMain from './components/Weather/WeatherMain'
 import Home from './components/HomePage'
 import CoronaVirus from './components/CoronaVirus'
+
+import './App.css'
+import './assets/styles-adaptive.css/weather.css'
 
 function App() {
 	return (

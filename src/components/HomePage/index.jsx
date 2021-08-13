@@ -3,8 +3,6 @@ import { Link } from 'react-router-dom'
 import weatherImage from '../../img/weather-icon2.png'
 import corona from '../../img/corona-icon.png'
 import { motion } from 'framer-motion'
-import '../../assets/styles-adaptive.css/home.css'
-import '../../App.css'
 
 function Home() {
 	const fadeLeft = {
