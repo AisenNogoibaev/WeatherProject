@@ -7,6 +7,7 @@ import CoronaVirus from './components/CoronaVirus'
 
 import './App.css'
 import './assets/styles-adaptive.css/weather.css'
+import './assets/styles-adaptive.css/home.css'
 
 function App() {
 	return (
