@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useCallback } from 'react'
 import { Link } from 'react-router-dom'
 import weatherImage from '../../img/sun.png'
 import corona from '../../img/virus.png'
@@ -24,14 +24,17 @@ function Home() {
 				className='homepage__bg'
 			>
 				<Particles
-					style={{ maxWidth: '90vw', marginRight: '-30px' }}
+					style={{
+						maxWidth: '90vw',
+						marginRight: '-30px',
+					}}
 					params={{
 						particles: {
 							number: {
-								value: 160,
+								value: 90,
 								density: {
 									enable: true,
-									value_area: 800,
+									value_area: 300,
 								},
 							},
 							color: {
@@ -48,8 +51,8 @@ function Home() {
 								},
 								image: {
 									src: 'img/github.svg',
-									width: 100,
-									height: 100,
+									width: 50,
+									height: 50,
 								},
 							},
 							opacity: {
@@ -67,7 +70,7 @@ function Home() {
 								random: true,
 								anim: {
 									enable: false,
-									speed: 4,
+									speed: 1,
 									size_min: 0.3,
 									sync: false,
 								},
@@ -119,7 +122,7 @@ function Home() {
 									size: 0,
 									duration: 2,
 									opacity: 0,
-									speed: 3,
+									speed: 1,
 								},
 								repulse: {
 									distance: 400,
@@ -134,6 +137,7 @@ function Home() {
 							},
 						},
 						retina_detect: true,
+						fps: 10,
 					}}
 				/>
 				<div className='route__form'>
@@ -168,5 +172,8 @@ function Home() {
 		</div>
 	)
 }
+function areEqual(prevProps, nextProps) {
+	return false
+}
 
-export default Home
+export default React.memo(Home, areEqual)

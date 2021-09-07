@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
 import { useSelector } from 'react-redux'
 import Form from './WeatherComponent/Form'
 import Weather from './WeatherComponent/Weather'
@@ -8,17 +8,43 @@ import cloudes from './assets/img/sky-sun.gif'
 import sun from './assets/img/sun.gif'
 import { Link } from 'react-router-dom'
 import { motion } from 'framer-motion'
+import rainMusic from './assets/audio/rain.mp3'
+import cloudsMusic from './assets/audio/sun.mp3'
+import sunMusic from './assets/audio/sunMusic.mp3'
 
 const WeatherMain = () => {
 	const state = useSelector((state) => state.weatherReducer)
 	const weatherCheck = useSelector((state) => state.weatherReducer.weatherMain)
 	console.log(weatherCheck)
-
+	const [rainM] = useState(new Audio(rainMusic))
+	const [cloudsM] = useState(new Audio(cloudsMusic))
+	const [sunM] = useState(new Audio(sunMusic))
+	useEffect(() => {
+		if (weatherCheck === 'Rain') {
+			rainM.play()
+			setTimeout(() => {
+				rainM.pause()
+			}, 5000)
+		}
+		if (weatherCheck === 'Clear' || weatherCheck === 'Sun') {
+			sunM.play()
+			setTimeout(() => {
+				sunM.pause()
+			}, 5000)
+		}
+		if (weatherCheck === 'Clouds' || weatherCheck === 'Mist') {
+			cloudsM.play()
+			setTimeout(() => {
+				cloudsM.pause()
+			}, 5000)
+		}
+	}, [weatherCheck])
 	return (
 		<motion.div
 			initial={{ opacity: 0 }}
 			animate={{ opacity: 1 }}
 			exit={{ opacity: 0 }}
+			transition={{ duration: 1.5 }}
 		>
 			<div className='wrapper'>
 				{' '}
@@ -45,7 +71,11 @@ const WeatherMain = () => {
 					</Link>
 					<div className='container'>
 						<div className='row'>
-							<div
+							<motion.div
+								initial={{ opacity: 0 }}
+								animate={{ opacity: 1 }}
+								exit={{ opacity: 0 }}
+								transition={{ duration: 1 }}
 								style={{
 									backgroundImage: `url(${
 										weatherCheck === 'Rain'
@@ -58,7 +88,7 @@ const WeatherMain = () => {
 								className='col-6 title-container'
 							>
 								<Titles />
-							</div>
+							</motion.div>
 							<div className='col-6 form-container'>
 								<Form />
 								<Weather

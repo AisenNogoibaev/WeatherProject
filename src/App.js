@@ -11,13 +11,15 @@ import './assets/styles-adaptive.css/home.css'
 
 function App() {
 	return (
-		<BrowserRouter>
-			<Switch>
-				<Route path={'/corona'} component={CoronaVirus} />
-				<Route path={'/weather'} component={WeatherMain} />
-				<Route path={'/'} component={Home} />
-			</Switch>
-		</BrowserRouter>
+		<>
+			<BrowserRouter>
+				<Switch>
+					<Route path={'/corona'} component={CoronaVirus} />
+					<Route path={'/weather'} component={WeatherMain} />
+					<Route path={'/'} component={Home} />
+				</Switch>
+			</BrowserRouter>
+		</>
 	)
 }
 

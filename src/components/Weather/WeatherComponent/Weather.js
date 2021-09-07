@@ -9,9 +9,9 @@ const Weather = (props) => {
 				<p className='weather__key'>
 					Location:{' '}
 					<span className='weather__value'>
-						{props.city !== ' Not Found'
+						{props.city !== 'Not Found'
 							? props.city + ',' + props.country
-							: ' ' + props.error}
+							: ' Not Found'}
 					</span>
 				</p>
 			)}
